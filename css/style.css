@@ -1,0 +1,2015 @@
+/*
+	Astral 1.0 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+@charset 'UTF-8';
+
+@font-face
+{
+    font-family: 'LigatureSymbols';
+    src: url('fonts/LigatureSymbols.eot');
+    src: url('fonts/LigatureSymbols.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LigatureSymbols.woff') format('woff'),
+         url('fonts/LigatureSymbols.ttf') format('truetype'),
+         url('fonts/LigatureSymbols.svg#LigatureSymbols') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/*********************************************************************************/
+/* Make some styles                                                              */
+/*********************************************************************************/
+
+/* particles js styles */
+
+#particles-js canvas
+{
+    display: block;
+    /*vertical-align: bottom;*/
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+#particles-js
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.progresscircle {
+  margin: 10px auto;
+  width: 75%;
+  /*height: 100px;*/
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.progresscircle > svg {
+    width: 100%;
+    display: block;
+}
+
+#myTable {
+    text-align: center;
+}
+
+/*LATEX typeset*/
+#tex sub, #latex sub, #latex sup {
+  text-transform: uppercase;
+}
+
+#tex sub, #latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+#tex, #latex, #tex sub, #latex sub {
+  font-size: 1em;
+}
+
+#latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
+/* */
+
+
+canvas
+{
+    display: block;
+    position: fixed;
+    z-index: -1;
+}
+
+
+div.backtotoparrow {
+  /* position: -webkit-sticky; /* Safari */
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  /* z-index: 3; */
+  /*float: right;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 4px 8px 4px 16px;
+  font: 'Source Sans Pro';
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+div.backtotoparrow.icon {
+  color: white;
+}
+
+div.backtotoparrow:hover {
+  background-color: black;
+}
+
+a.button1 {
+  /*float: right;*/
+  background-color: white;
+  border: none;
+  color: #777;
+  padding: 8px 16px;
+  font: 'Source Sans Pro';
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #4967ad;
+  border-radius: 2px;
+}
+
+a.buttonADS {
+  /*float: left;*/
+  background-color: white;
+  border: none;
+  color: #777;
+  padding: 8px 16px;
+  font: 'Source Sans Pro';
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #4967ad;
+  border-radius: 2px;
+}
+
+
+a.button1:hover {
+  background-color: #4967ad;
+  color: white;
+}
+
+a.buttonADS:hover {
+  background-color: #4967ad;
+  color: white;
+}
+
+button.button_new {
+  /*float: left;*/
+  background-color: white;
+  border: none;
+  color: #777;
+  padding: 8px 16px;
+  font: 'Source Sans Pro';
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #4967ad;
+  border-radius: 2px;
+}
+
+button.button_new:hover {
+  background-color: #4967ad;
+  color: white;
+}
+
+.firstp {
+  text-align: justify;
+  margin-top: 0.3em;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.indentp {
+  text-align: justify;
+  margin-top: -1.5em;
+  text-indent: 1.0em;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.textwrapright {
+  width: 43%;
+  clear: right;
+  float: left;
+  padding: 0;
+  margin: 1em;
+  display: table;
+}
+
+.textwrapleft {
+  width: 43%;
+  clear: left;
+  float: right;
+  padding: 0;
+  margin: 1em;
+  display: table;
+}
+
+.textwrapleftlink {
+  width: 43%;
+  clear: left;
+  float: right;
+  padding: 0;
+  margin: 0.25em;
+  display: table;
+}
+
+figure.textwrapleft img {
+  width: 100%;
+  border: 1px #777 solid;
+}
+
+figure.textwrapleftlink img {
+  width: 100%;
+  border: 1px #777 solid;
+}
+
+figure.textwrapright img {
+  width: 100%;
+  border: 1px #777 solid;
+}
+
+iframe.textwrapright {
+  width: 43%;
+  clear: right;
+  float: left;
+  padding: 0;
+  margin-top: 1.0em;
+  margin-right: 1.0em;
+  margin-bottom: 0.0em;
+  margin-left: 0.0em;
+  display: table;
+  border: 1px #777 solid;
+  border-radius: 5px;
+}
+
+figcaption {
+  color: #777;
+  font-style: italic;
+  margin-top: -10px;
+  padding: 0;
+  text-align: left;
+}
+
+p.hy {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+
+	*
+	{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		/*
+			Fallback for browsers that don't support pseudo elements.
+		*/
+
+		background: url('images/bg.jpg');
+	}
+
+		body:before
+		{
+			content: '';
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+
+			/*
+				Default background is a weird gradient so I've set it to stretch to
+				100% in both directions. If you replace it with a photo or something,
+				set background-size to "cover".
+			*/
+
+			background: url('images/bg.jpg');
+			background-size: 100% 100%;
+		}
+
+		/*
+			The pseudo element below applies a noise pattern to the background image. It's
+			meant to help mask blurriness, but you can remove it if you don't like it.
+		*/
+
+		body:after
+		{
+			content: '';
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('images/overlay.png');
+			z-index: -2;
+		}
+
+	body, input, textarea
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		color: #777;
+	}
+
+	strong, b
+	{
+		font-weight: 400;
+		color: #363636;
+	}
+
+	h1, h2, h3, h4,h5, h6
+	{
+		font-weight: 400;
+		color: #363636;
+	}
+
+	blockquote
+	{
+		border-left: solid 0.5em #ddd;
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+
+	em, i
+	{
+		font-style: italic;
+	}
+
+	hr
+	{
+		border: 0;
+		border-top: solid 1px #ddd;
+		padding: 1.5em 0 0 0;
+		margin: 1.75em 0 0 0;
+	}
+
+	sub
+	{
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+
+	sup
+	{
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	table
+	{
+		width: 100%;
+	}
+
+	table.style1
+	{
+		width: 100%;
+	}
+
+		table.style1 tbody tr:nth-child(2n+2)
+		{
+			background: #f4f4f4;
+		}
+
+		table.style1 td
+		{
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+		table.style1 th
+		{
+			text-align: left;
+			font-weight: 400;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+		table.style1 thead
+		{
+			background: #222222;
+			color: #fff;
+		}
+
+		table.style1 tfoot
+		{
+			background: #eee;
+		}
+
+		/*table.style1 tbody
+		{
+		}*/
+
+	/*form
+	{
+	}*/
+
+		form input.text,
+		form select,
+		form textarea
+		{
+			border: 0;
+			background: #f0f0f0;
+			padding: 0.65em;
+			width: 100%;
+		}
+
+		form input.button,
+		form input.text,
+		form select,
+		form textarea
+		{
+			-webkit-appearance: none;
+      appearance: none;
+		}
+
+		form textarea
+		{
+			height: 15em;
+		}
+
+		form input:focus,
+		form select:focus,
+		form textarea:focus
+		{
+			background: #f5f5f5;
+		}
+
+		form ::-webkit-input-placeholder
+		{
+			color: #999;
+		}
+
+		form :-moz-placeholder
+		{
+			color: #999;
+		}
+
+		form ::-moz-placeholder
+		{
+			color: #999;
+		}
+
+		form :-ms-input-placeholder
+		{
+			color: #999;
+		}
+
+	br.clear
+	{
+		clear: both;
+	}
+
+	p, ul, ol, dl, table, blockquote, form
+	{
+		margin-bottom: 2em;
+	}
+
+	section,
+	article
+	{
+		margin-bottom: 3em;
+	}
+
+	section > :last-child,
+	article > :last-child
+	{
+		margin-bottom: 0;
+	}
+
+	section:last-child,
+	article:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	.image
+	{
+		display: inline-block;
+	}
+
+		.image img
+		{
+            border-radius: 4px;
+			display: block;
+			width: 100%;
+		}
+
+	.image-full
+	{
+        border-radius: 4px;
+		display: block;
+		width: 100%;
+		margin: 0 0 0 0;
+	}
+
+	.image-left
+	{
+		float: left;
+		margin: 0 2em 2em 0;
+	}
+
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+
+		.image-centered img
+		{
+			margin: 0 auto;
+			width: auto;
+		}
+
+	.button
+	{
+		display: inline-block;
+		background-color: #222222;
+		color: #fff;
+		border: 0;
+		cursor: pointer;
+		outline: 0;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-o-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		.button:hover
+		{
+			background-color: #333333;
+		}
+
+		.button:active
+		{
+			background-color: #444444;
+		}
+
+		.button-alt
+		{
+			background-color: #777777;
+		}
+
+			.button-alt:hover
+			{
+				background-color: #888888;
+			}
+
+			.button-alt:active
+			{
+				background-color: #999999;
+			}
+
+		/*.button-small
+		{
+		}
+
+		.button-big
+		{
+		}
+
+		.button-huge
+		{
+		}*/
+
+	ul.style1
+	{
+		list-style: disc;
+		padding-left: 1em;
+	}
+
+		ul.style1 li
+		{
+			padding-left: 0.5em;
+		}
+
+	/*ul.links
+	{
+	}*/
+
+		ul.links li
+		{
+			display: inline-block;
+		}
+
+			ul.links li:before
+			{
+				display: inline;
+				content: '\2022';
+				opacity: 0.5;
+			}
+
+			ul.links li:first-child:before
+			{
+				display: none;
+			}
+
+	ol.style1
+	{
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		ol.style1 li
+		{
+			padding-left: 0.25em;
+		}
+
+	.byline
+	{
+		display: block;
+		color: #aaa;
+	}
+
+	.icon
+	{
+		text-decoration: none;
+	}
+
+		.icon:before
+		{
+			text-decoration: none;
+			padding-right: 0.25em;
+			font-family: 'LigatureSymbols';
+			-webkit-text-rendering: optimizeLegibility;
+			-moz-text-rendering: optimizeLegibility;
+			-ms-text-rendering: optimizeLegibility;
+			-o-text-rendering: optimizeLegibility;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			-ms-font-smoothing: antialiased;
+			-o-font-smoothing: antialiased;
+			font-smooth: antialiased;
+			-webkit-font-feature-settings: "liga" 1, "dlig" 1;
+			-moz-font-feature-settings: "liga=1, dlig=1";
+			-ms-font-feature-settings: "liga" 1, "dlig" 1;
+			-o-font-feature-settings: "liga" 1, "dlig" 1;
+			font-feature-settings: "liga" 1, "dlig" 1;
+		}
+
+/*********************************************************************************/
+/* Icons                                                                         */
+/*********************************************************************************/
+
+	/*
+		These are powered by the kickass Ligature Symbols font by
+		Kazuyuki Motoyama (@kudakurage). I've already added styles for
+		a pretty good set of icons, but the font actually has WAYYYY
+		more (including icons for many other accounts and services).
+		To add them to Astral, go here to look up the unicode for
+		the icon you want to use:
+
+		http://kudakurage.com/ligature_symbols/
+
+		Then simply add the CSS for it in this format:
+
+		.icon-(name):before		{ content: '(unicode)'; }
+	*/
+
+
+.icon-notdef:before {
+  content: "\ff00";
+}
+.icon-A:before {
+  content: "\41";
+}
+.icon-B:before {
+  content: "\42";
+}
+.icon-C:before {
+  content: "\43";
+}
+.icon-D:before {
+  content: "\44";
+}
+.icon-E:before {
+  content: "\45";
+}
+.icon-F:before {
+  content: "\46";
+}
+.icon-G:before {
+  content: "\47";
+}
+.icon-H:before {
+  content: "\48";
+}
+.icon-I:before {
+  content: "\49";
+}
+.icon-J:before {
+  content: "\4a";
+}
+.icon-K:before {
+  content: "\4b";
+}
+.icon-L:before {
+  content: "\4c";
+}
+.icon-M:before {
+  content: "\4d";
+}
+.icon-N:before {
+  content: "\4e";
+}
+.icon-O:before {
+  content: "\4f";
+}
+.icon-P:before {
+  content: "\50";
+}
+.icon-Q:before {
+  content: "\51";
+}
+.icon-R:before {
+  content: "\52";
+}
+.icon-S:before {
+  content: "\53";
+}
+.icon-T:before {
+  content: "\54";
+}
+.icon-U:before {
+  content: "\55";
+}
+.icon-V:before {
+  content: "\56";
+}
+.icon-W:before {
+  content: "\57";
+}
+.icon-X:before {
+  content: "\58";
+}
+.icon-Y:before {
+  content: "\59";
+}
+.icon-Z:before {
+  content: "\5a";
+}
+.icon-a:before {
+  content: "\61";
+}
+.icon-b:before {
+  content: "\62";
+}
+.icon-c:before {
+  content: "\63";
+}
+.icon-d:before {
+  content: "\64";
+}
+.icon-e:before {
+  content: "\65";
+}
+.icon-f:before {
+  content: "\66";
+}
+.icon-g:before {
+  content: "\67";
+}
+.icon-h:before {
+  content: "\68";
+}
+.icon-i:before {
+  content: "\69";
+}
+.icon-j:before {
+  content: "\6a";
+}
+.icon-k:before {
+  content: "\6b";
+}
+.icon-l:before {
+  content: "\6c";
+}
+.icon-m:before {
+  content: "\6d";
+}
+.icon-n:before {
+  content: "\6e";
+}
+.icon-o:before {
+  content: "\6f";
+}
+.icon-p:before {
+  content: "\70";
+}
+.icon-q:before {
+  content: "\71";
+}
+.icon-r:before {
+  content: "\72";
+}
+.icon-s:before {
+  content: "\73";
+}
+.icon-t:before {
+  content: "\74";
+}
+.icon-u:before {
+  content: "\75";
+}
+.icon-v:before {
+  content: "\76";
+}
+.icon-w:before {
+  content: "\77";
+}
+.icon-x:before {
+  content: "\78";
+}
+.icon-y:before {
+  content: "\79";
+}
+.icon-z:before {
+  content: "\7a";
+}
+.icon-zero:before {
+  content: "\30";
+}
+.icon-one:before {
+  content: "\31";
+}
+.icon-two:before {
+  content: "\32";
+}
+.icon-three:before {
+  content: "\33";
+}
+.icon-four:before {
+  content: "\34";
+}
+.icon-five:before {
+  content: "\35";
+}
+.icon-six:before {
+  content: "\36";
+}
+.icon-seven:before {
+  content: "\37";
+}
+.icon-eight:before {
+  content: "\38";
+}
+.icon-nine:before {
+  content: "\39";
+}
+.icon-asterisk:before {
+  content: "\2a";
+}
+.icon-backslash:before {
+  content: "\5c";
+}
+.icon-colon:before {
+  content: "\3a";
+}
+.icon-comma:before {
+  content: "\2c";
+}
+.icon-exclam:before {
+  content: "\21";
+}
+.icon-numbersign:before {
+  content: "\23";
+}
+.icon-period:before {
+  content: "\2e";
+}
+.icon-periodcentered:before {
+  content: "\b7";
+}
+.icon-question:before {
+  content: "\3f";
+}
+.icon-quotedbl:before {
+  content: "\22";
+}
+.icon-quotesingle:before {
+  content: "\27";
+}
+.icon-semicolon:before {
+  content: "\3b";
+}
+.icon-slash:before {
+  content: "\2f";
+}
+.icon-underscore:before {
+  content: "\5f";
+}
+.icon-braceleft:before {
+  content: "\7b";
+}
+.icon-braceright:before {
+  content: "\7d";
+}
+.icon-bracketleft:before {
+  content: "\5b";
+}
+.icon-bracketright:before {
+  content: "\5d";
+}
+.icon-parenleft:before {
+  content: "\28";
+}
+.icon-parenright:before {
+  content: "\29";
+}
+.icon-emdash:before {
+  content: "\2014";
+}
+.icon-endash:before {
+  content: "\2013";
+}
+.icon-hyphen:before {
+  content: "\2d";
+}
+.icon-guillemotleft:before {
+  content: "\3c";
+}
+.icon-guillemotright:before {
+  content: "\3e";
+}
+.icon-guilsinglleft:before {
+  content: "\2039";
+}
+.icon-guilsinglright:before {
+  content: "\203a";
+}
+.icon-dollar:before {
+  content: "\24";
+}
+.icon-asciitilde:before {
+  content: "\7e";
+}
+.icon-equal:before {
+  content: "\3d";
+}
+.icon-percent:before {
+  content: "\25";
+}
+.icon-plus:before {
+  content: "\2b";
+}
+.icon-ampersand:before {
+  content: "\26";
+}
+.icon-at:before {
+  content: "\40";
+}
+.icon-bar:before {
+  content: "\7c";
+}
+.icon-asciicircum:before {
+  content: "\5e";
+}
+.icon-addstar:before {
+  content: "\e900";
+}
+.icon-adjust:before {
+  content: "\e901";
+}
+.icon-album:before {
+  content: "\e902";
+}
+.icon-alignadjust:before {
+  content: "\e903";
+}
+.icon-aligncenter:before {
+  content: "\e904";
+}
+.icon-alignleft:before {
+  content: "\e905";
+}
+.icon-alignright:before {
+  content: "\e906";
+}
+.icon-amazon:before {
+  content: "\e907";
+}
+.icon-android:before {
+  content: "\e908";
+}
+.icon-app:before {
+  content: "\e909";
+}
+.icon-apple:before {
+  content: "\e90a";
+}
+.icon-arrowdown:before {
+  content: "\e90b";
+}
+.icon-arrowleft:before {
+  content: "\e90c";
+}
+.icon-arrowright:before {
+  content: "\e90d";
+}
+.icon-arrowup:before {
+  content: "\e90e";
+}
+.icon-back:before {
+  content: "\e90f";
+}
+.icon-backspace:before {
+  content: "\e910";
+}
+.icon-bad:before {
+  content: "\e911";
+}
+.icon-ban:before {
+  content: "\e912";
+}
+.icon-barcode:before {
+  content: "\e913";
+}
+.icon-bell:before {
+  content: "\e914";
+}
+.icon-bicycle:before {
+  content: "\e915";
+}
+.icon-bold:before {
+  content: "\e916";
+}
+.icon-book:before {
+  content: "\e917";
+}
+.icon-bookmark:before {
+  content: "\e918";
+}
+.icon-building:before {
+  content: "\e919";
+}
+.icon-bus:before {
+  content: "\e91a";
+}
+.icon-camera:before {
+  content: "\e91b";
+}
+.icon-car:before {
+  content: "\e91c";
+}
+.icon-category:before {
+  content: "\e91d";
+}
+.icon-check:before {
+  content: "\e91e";
+}
+.icon-chrome:before {
+  content: "\e91f";
+}
+.icon-cinnamon:before {
+  content: "\e920";
+}
+.icon-circle:before {
+  content: "\e921";
+}
+.icon-clear:before {
+  content: "\e922";
+}
+.icon-clip:before {
+  content: "\e923";
+}
+.icon-cloud:before {
+  content: "\e924";
+}
+.icon-code:before {
+  content: "\e925";
+}
+.icon-comment:before {
+  content: "\e926";
+}
+.icon-comments:before {
+  content: "\e927";
+}
+.icon-compass:before {
+  content: "\e928";
+}
+.icon-cookpad:before {
+  content: "\e929";
+}
+.icon-copy:before {
+  content: "\e92a";
+}
+.icon-crop:before {
+  content: "\e92b";
+}
+.icon-crown:before {
+  content: "\e92c";
+}
+.icon-cut:before {
+  content: "\e92d";
+}
+.icon-dashboard:before {
+  content: "\e92e";
+}
+.icon-delicious:before {
+  content: "\e92f";
+}
+.icon-down:before {
+  content: "\e930";
+}
+.icon-dribbble:before {
+  content: "\e931";
+}
+.icon-dropdown:before {
+  content: "\e932";
+}
+.icon-edit:before {
+  content: "\e933";
+}
+.icon-eject:before {
+  content: "\e934";
+}
+.icon-etc:before {
+  content: "\e935";
+}
+.icon-evernote:before {
+  content: "\e936";
+}
+.icon-exchange:before {
+  content: "\e937";
+}
+.icon-external:before {
+  content: "\e938";
+}
+.icon-facebook:before {
+  content: "\e939";
+}
+.icon-file:before {
+  content: "\e93a";
+}
+.icon-firefox:before {
+  content: "\e93b";
+}
+.icon-flag:before {
+  content: "\e93c";
+}
+.icon-flickr:before {
+  content: "\e93d";
+}
+.icon-folder:before {
+  content: "\e93e";
+}
+.icon-foursquare:before {
+  content: "\e93f";
+}
+.icon-forward:before {
+  content: "\e940";
+}
+.icon-friend:before {
+  content: "\e941";
+}
+.icon-frustrate:before {
+  content: "\e942";
+}
+.icon-full:before {
+  content: "\e943";
+}
+.icon-game:before {
+  content: "\e944";
+}
+.icon-gear:before {
+  content: "\e945";
+}
+.icon-geo:before {
+  content: "\e946";
+}
+.icon-github:before {
+  content: "\e947";
+}
+.icon-globe:before {
+  content: "\e948";
+}
+.icon-good:before {
+  content: "\e949";
+}
+.icon-google:before {
+  content: "\e94a";
+}
+.icon-graph:before {
+  content: "\e94b";
+}
+.icon-group:before {
+  content: "\e94c";
+}
+.icon-hatena:before {
+  content: "\e94d";
+}
+.icon-heart:before {
+  content: "\e94e";
+}
+.icon-heartempty:before {
+  content: "\e94f";
+}
+.icon-help:before {
+  content: "\e950";
+}
+.icon-horizontal:before {
+  content: "\e951";
+}
+.icon-home:before {
+  content: "\e072";
+}
+.icon-hot:before {
+  content: "\e953";
+}
+.icon-image:before {
+  content: "\e954";
+}
+.icon-info:before {
+  content: "\e955";
+}
+.icon-instapaper:before {
+  content: "\e956";
+}
+.icon-internetexplorer:before {
+  content: "\e957";
+}
+.icon-iphone:before {
+  content: "\e958";
+}
+.icon-italic:before {
+  content: "\e959";
+}
+.icon-key:before {
+  content: "\e95a";
+}
+.icon-keyboard:before {
+  content: "\e95b";
+}
+.icon-kudakurage:before {
+  content: "\e95c";
+}
+.icon-laugh:before {
+  content: "\e95d";
+}
+.icon-left:before {
+  content: "\e95e";
+}
+.icon-wink:before {
+  content: "\e95f";
+}
+.icon-link:before {
+  content: "\e960";
+}
+.icon-linkedin:before {
+  content: "\e961";
+}
+.icon-list:before {
+  content: "\e962";
+}
+.icon-location:before {
+  content: "\e963";
+}
+.icon-lock:before {
+  content: "\e964";
+}
+.icon-login:before {
+  content: "\e08a";
+}
+.icon-logout:before {
+  content: "\e966";
+}
+.icon-magic:before {
+  content: "\e967";
+}
+.icon-mail:before {
+  content: "\e968";
+}
+.icon-map:before {
+  content: "\e969";
+}
+.icon-meal:before {
+  content: "\e96a";
+}
+.icon-memo:before {
+  content: "\e96b";
+}
+.icon-menu:before {
+  content: "\e96c";
+}
+.icon-minus:before {
+  content: "\e96d";
+}
+.icon-mixi:before {
+  content: "\e96e";
+}
+.icon-move:before {
+  content: "\e96f";
+}
+.icon-music:before {
+  content: "\e970";
+}
+.icon-newwindow:before {
+  content: "\e971";
+}
+.icon-next:before {
+  content: "\e972";
+}
+.icon-notify:before {
+  content: "\e973";
+}
+.icon-off:before {
+  content: "\e974";
+}
+.icon-opera:before {
+  content: "\e975";
+}
+.icon-ordble:before {
+  content: "\e976";
+}
+.icon-paint:before {
+  content: "\e977";
+}
+.icon-paramater:before {
+  content: "\e978";
+}
+.icon-pause:before {
+  content: "\e979";
+}
+.icon-pc:before {
+  content: "\e97a";
+}
+.icon-pencil:before {
+  content: "\e97b";
+}
+.icon-phone:before {
+  content: "\e97c";
+}
+.icon-photo:before {
+  content: "\e97d";
+}
+.icon-picasa:before {
+  content: "\e97e";
+}
+.icon-pin:before {
+  content: "\e97f";
+}
+.icon-pinterest:before {
+  content: "\e980";
+}
+.icon-plane:before {
+  content: "\e981";
+}
+.icon-play:before {
+  content: "\e982";
+}
+.icon-playmedia:before {
+  content: "\e983";
+}
+.icon-plusicon:before {
+  content: "\e984";
+}
+.icon-present:before {
+  content: "\e985";
+}
+.icon-print:before {
+  content: "\e986";
+}
+.icon-quote:before {
+  content: "\e987";
+}
+.icon-readability:before {
+  content: "\e988";
+}
+.icon-record:before {
+  content: "\e989";
+}
+.icon-refresh:before {
+  content: "\e98a";
+}
+.icon-remove:before {
+  content: "\e98b";
+}
+.icon-repeat:before {
+  content: "\e98c";
+}
+.icon-reply:before {
+  content: "\e98d";
+}
+.icon-right:before {
+  content: "\e98e";
+}
+.icon-rss:before {
+  content: "\e98f";
+}
+.icon-safari:before {
+  content: "\e990";
+}
+.icon-save:before {
+  content: "\e991";
+}
+.icon-search:before {
+  content: "\e992";
+}
+.icon-wrench:before {
+  content: "\e993";
+}
+.icon-share:before {
+  content: "\e994";
+}
+.icon-shopping:before {
+  content: "\e995";
+}
+.icon-shuffle:before {
+  content: "\e996";
+}
+.icon-skype:before {
+  content: "\e997";
+}
+.icon-sleipnir:before {
+  content: "\e998";
+}
+.icon-small:before {
+  content: "\e999";
+}
+.icon-smile:before {
+  content: "\e99a";
+}
+.icon-sns:before {
+  content: "\e99b";
+}
+.icon-sort:before {
+  content: "\e99c";
+}
+.icon-star:before {
+  content: "\e99d";
+}
+.icon-starempty:before {
+  content: "\e99e";
+}
+.icon-stop:before {
+  content: "\e99f";
+}
+.icon-surprise:before {
+  content: "\e9a0";
+}
+.icon-sync:before {
+  content: "\e9a1";
+}
+.icon-tabezou:before {
+  content: "\e9a2";
+}
+.icon-table:before {
+  content: "\e9a3";
+}
+.icon-tag:before {
+  content: "\e9a4";
+}
+.icon-tile:before {
+  content: "\e9a5";
+}
+.icon-tilemenu:before {
+  content: "\e9a6";
+}
+.icon-time:before {
+  content: "\e9a7";
+}
+.icon-trash:before {
+  content: "\e9a8";
+}
+.icon-trouble:before {
+  content: "\e9a9";
+}
+.icon-tumblr:before {
+  content: "\e9aa";
+}
+.icon-twitter:before {
+  content: "\e12f";
+}
+.icon-underline:before {
+  content: "\e9ac";
+}
+.icon-undo:before {
+  content: "\e9ad";
+}
+.icon-unlock:before {
+  content: "\e9ae";
+}
+.icon-up:before {
+  content: "\e9af";
+}
+.icon-upload:before {
+  content: "\e9b0";
+}
+.icon-user:before {
+  content: "\e137";
+}
+.icon-vertical:before {
+  content: "\e9b2";
+}
+.icon-video:before {
+  content: "\e9b3";
+}
+.icon-view:before {
+  content: "\e9b4";
+}
+.icon-volume:before {
+  content: "\e9b5";
+}
+.icon-volumedown:before {
+  content: "\e9b6";
+}
+.icon-volumeup:before {
+  content: "\e9b7";
+}
+.icon-walking:before {
+  content: "\e9b8";
+}
+.icon-web:before {
+  content: "\e9b9";
+}
+.icon-wifi:before {
+  content: "\e9ba";
+}
+.icon-youtube:before {
+  content: "\e9bb";
+}
+.icon-zoomin:before {
+  content: "\e9bc";
+}
+.icon-zoomout:before {
+  content: "\e9bd";
+}
+.icon-brush:before {
+  content: "\e9be";
+}
+.icon-buffalo:before {
+  content: "\e9bf";
+}
+.icon-dailycalendar:before {
+  content: "\e9c0";
+}
+.icon-coffee:before {
+  content: "\e9c1";
+}
+.icon-dark:before {
+  content: "\e9c2";
+}
+.icon-eraser:before {
+  content: "\e9c3";
+}
+.icon-grayscale:before {
+  content: "\e9c4";
+}
+.icon-ink:before {
+  content: "\e9c5";
+}
+.icon-invert:before {
+  content: "\e9c6";
+}
+.icon-light:before {
+  content: "\e9c7";
+}
+.icon-palette:before {
+  content: "\e9c8";
+}
+.icon-refreshbutton:before {
+  content: "\e9c9";
+}
+.icon-sepia:before {
+  content: "\e9ca";
+}
+.icon-download:before {
+  content: "\e9cb";
+}
+.icon-windows:before {
+  content: "\e9cc";
+}
+.icon-emphasis:before {
+  content: "\e9cd";
+}
+.icon-gree:before {
+  content: "\e9ce";
+}
+.icon-gumroad:before {
+  content: "\e9cf";
+}
+.icon-instagram:before {
+  content: "\e9d0";
+}
+.icon-jpa:before {
+  content: "\e9d1";
+}
+.icon-mobage:before {
+  content: "\e9d2";
+}
+.icon-strike:before {
+  content: "\e9d3";
+}
+.icon-yapcasia:before {
+  content: "\e9d4";
+}
+.icon-yapcasialogo:before {
+  content: "\e9d5";
+}
+.icon-yapcasialogomark:before {
+  content: "\e9d6";
+}
+.icon-ltthon:before {
+  content: "\e9d7";
+}
+.icon-calendar:before {
+  content: "\e9d8";
+}
+.icon-SQALE:before {
+  content: "\e9d9";
+}
+.icon-heteml:before {
+  content: "\e9da";
+}
+.icon-hatenabookmark:before {
+  content: "\e9db";
+}
+.icon-paperboy_co:before {
+  content: "\e9dc";
+}
+.icon-checkbox:before {
+  content: "\e9dd";
+}
+.icon-checkboxempty:before {
+  content: "\e9de";
+}
+.icon-aim:before {
+  content: "\e9df";
+}
+.icon-bing:before {
+  content: "\e9e0";
+}
+.icon-blogger:before {
+  content: "\e9e1";
+}
+.icon-cursor:before {
+  content: "\e9e2";
+}
+.icon-digg:before {
+  content: "\e9e3";
+}
+.icon-grab:before {
+  content: "\e9e4";
+}
+.icon-myspace:before {
+  content: "\e9e5";
+}
+.icon-pointer:before {
+  content: "\e9e6";
+}
+.icon-sitemap:before {
+  content: "\e9e7";
+}
+.icon-terminal:before {
+  content: "\e9e8";
+}
+.icon-vimeo:before {
+  content: "\e9e9";
+}
+.icon-wordpress:before {
+  content: "\e9ea";
+}
+.icon-yahoo:before {
+  content: "\e9eb";
+}
+.icon-dropbox:before {
+  content: "\e9ec";
+}
+.icon-server:before {
+  content: "\e9ed";
+}
+.icon-bag:before {
+  content: "\e9ee";
+}
+.icon-college:before {
+  content: "\e9ef";
+}
+.icon-female:before {
+  content: "\e9f0";
+}
+.icon-line:before {
+  content: "\e9f1";
+}
+.icon-male:before {
+  content: "\e9f2";
+}
+.icon-spa:before {
+  content: "\e9f3";
+}
+.icon-umbrella:before {
+  content: "\e9f4";
+}
+.icon-ustream:before {
+  content: "\e9f5";
+}
+.icon-slideshare:before {
+  content: "\e9f6";
+}
+.icon-soundcloud:before {
+  content: "\e9f7";
+}
+.icon-ubuntu:before {
+  content: "\e9f8";
+}
+.icon-vk:before {
+  content: "\e9f9";
+}
+.icon-yelp:before {
+  content: "\e9fa";
+}
+.icon-radiotele:before {
+  content: "\e892";
+}
+.icon-telescope:before {
+  content: "\e952";
+}
+.icon-mpia:before {
+  content: "\e965";
+}
+.icon-orcid:before {
+  content: "\e9ab";
+}
+.icon-researchgate:before {
+  content: "\e9b1";
+}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	/*#nav
+	{
+	}*/
+
+		#nav a
+		{
+			position: relative;
+			display: inline-block;
+			color: #fff;
+			width: 1em;
+			height: 1em;
+			line-height: 0.9em;
+		}
+
+			#nav a.icon:before
+			{
+				padding-right: 0;
+			}
+
+/*********************************************************************************/
+/* Panels                                                                        */
+/*********************************************************************************/
+
+	#main
+	{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.panel
+	{
+		position: relative;
+	}
+
+  .hidden
+	{
+		position: relative;
+    display: none; /* Initially hide the content */
+		padding: 1.5em 2.5em 3.5em 2.5em;
+		/*position: absolute;*/
+		top: 20em;
+		left: 0;
+		/*width: 52em;*/
+	}
+
+	/* Start */
+
+		/*#welcome
+		{
+		}*/
+
+			#welcome .pic
+			{
+				position: relative;
+				display: block;
+			}
+
+				/*
+					The pseudo element below applies a noise pattern to the "welcome" image. It's
+					meant to help mask blurriness, but you can remove it if you don't like it.
+				*/
+
+				#welcome .pic:before
+				{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url('images/overlay.png');
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+
+
+	/* Me */
+
+		/*#me
+		{
+		}*/
+
+			#me .pic
+			{
+				position: relative;
+			}
+
+				/*
+					The pseudo element below applies a noise pattern to the "me" image. It's
+					meant to help mask blurriness, but you can remove it if you don't like it.
+				*/
+
+				#me .pic:before
+				{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url('images/overlay.png');
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		color: #ccc;
+		color: rgba(255,255,255,0.45);
+	}
+
+		#footer a
+		{
+			color: #ddd;
+			color: rgba(255,255,255,0.65);
+			-moz-transition: color .25s ease-in-out;
+			-webkit-transition: color .25s ease-in-out;
+			-o-transition: color .25s ease-in-out;
+			-ms-transition: color .25s ease-in-out;
+			transition: color .25s ease-in-out;
+		}
+
+		#footer a:hover
+		{
+			color: rgba(255,255,255,1.0);
+		}

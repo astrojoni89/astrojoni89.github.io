@@ -1,0 +1,314 @@
+/*
+	Astral 1.0 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body, input, textarea
+	{
+		font-size: 11pt;
+		line-height: 1.75em;
+	}
+
+	h1, h2
+	{
+		font-size: 1.75em;
+		letter-spacing: -0.025em;
+	}
+
+	h3, h4, h5, h6
+	{
+		font-size: 1.25em;
+		letter-spacing: -0.025em;
+	}
+
+	header
+	{
+		margin: 0 0 1.5em 0;
+	}
+
+	table.style1
+	{
+		overflow-x: scroll;
+	}
+
+	/*ul.links
+	{
+	}*/
+
+		/*ul.links li
+		{
+		}*/
+
+			ul.links li:before
+			{
+				padding: 0 0.25em 0 0.25em;
+			}
+
+	.button
+	{
+		display: block;
+		width: 100%;
+		padding: 0.75em 0 0.75em 0;
+		text-align: center;
+		margin: 1em 0 0 0;
+	}
+
+	button.button_new {
+	  float: center;
+		margin-left: auto;
+		margin-right: auto;
+	  display: block;
+	}
+
+	.byline
+	{
+		margin: 0.5em 0 0 0;
+	}
+
+	/*.is-gallery
+	{
+	}*/
+
+		.is-gallery .image
+		{
+			margin: 0 0 0 0;
+		}
+
+
+
+		#particles-js
+		{
+		    position: absolute;
+		    z-index: -1;
+		    top: 0;
+		    left: 0;
+		}
+
+		.progresscircle {
+		  margin: 10px auto;
+		  width: 40px;
+		  height: 40px;
+		  position: relative;
+		}
+
+		.progresscircle > svg {
+		    width: 100%;
+		    display: block;
+		}
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper
+	{
+		padding: 7px;
+	}
+
+	#overlay_top
+	{
+		padding: 7px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 5;
+	}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		text-align: center;
+		margin: 6px 0 8px 0;
+	}
+
+		#nav a
+		{
+			font-size: 2.5em;
+			opacity: 0.5;
+			outline: 0;
+			width: 1.5em;
+			height: 1.5em;
+			line-height: 1.35em;
+		}
+
+			#nav a:active
+			{
+				opacity: 1.0;
+			}
+
+			#nav a span
+			{
+				display: none;
+			}
+
+/*********************************************************************************/
+/* Panels                                                                        */
+/*********************************************************************************/
+
+	#main
+	{
+		background: none;
+	}
+
+	.panel
+	{
+		padding: 15px 15px 15px 15px;
+		margin: 0 0 7px 0;
+		background: #fff;
+		box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.25);
+	}
+
+	.hidden
+	{
+		display: none; /* Initially hide the content */
+		padding: 15px 15px 15px 15px;
+		margin: 0 0 7px 0;
+		top: auto;
+		background: #fff;
+		box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.25);
+	}
+
+		.panel header
+		{
+			padding-top: 1em;
+		}
+
+	/* Start */
+
+		/*#welcome
+		{
+		}*/
+
+			#welcome .pic
+			{
+				width: 100%;
+			}
+
+				#welcome .pic img
+				{
+					display: block;
+					width: 100%;
+				}
+
+				#welcome .pic .arrow
+				{
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 70%;
+					margin-top: -1.375em;
+					width: 6.0em;
+					height: 2.75em;
+					background: #000;
+					background: rgba(0,0,0,0.75);
+					color: #fff;
+					text-align: center;
+					line-height: 2.75em;
+					font-size: 1.5em;
+					z-index: 1;
+					-moz-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-webkit-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-o-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-ms-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+				}
+
+
+			#welcome header
+			{
+				text-align: center;
+			}
+
+			#welcome h1
+			{
+				font-size: 2.15em;
+				letter-spacing: -0.025em;
+			}
+
+			#welcome .byline
+			{
+				font-size: 1.25em;
+			}
+
+
+	/* Me */
+
+		/*#me
+		{
+		}*/
+
+			#me .pic
+			{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+				width: 50%;
+			}
+
+                #me .pic spans {
+                    display: block;
+                    width: 100%;
+                }
+
+				#me .pic img
+				{
+					display: block;
+					width: 100%;
+				}
+
+				#me .pic .arrow
+				{
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 70%;
+					margin-top: -1.375em;
+					width: 6.0em;
+					height: 2.75em;
+					background: #000;
+					background: rgba(0,0,0,0.75);
+					color: #fff;
+					text-align: center;
+					line-height: 2.75em;
+					font-size: 1.5em;
+					z-index: 1;
+					-moz-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-webkit-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-o-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					-ms-transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+					transition: width .30s ease-in-out, padding-right .30s ease-in-out;
+				}
+
+			#me header
+			{
+				text-align: center;
+			}
+
+			#me h1
+			{
+				font-size: 2.15em;
+				letter-spacing: -0.025em;
+			}
+
+			#me .byline
+			{
+				font-size: 1.25em;
+			}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		text-align: center;
+		padding: 2em 0 0 0;
+		font-size: 0.85em;
+	}
