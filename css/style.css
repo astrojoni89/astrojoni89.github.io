@@ -329,6 +329,15 @@ button.button_new:hover {
   display: table;
 }
 
+.textwraprightlink {
+  width: 43%;
+  clear: right;
+  float: left;
+  padding: 0;
+  margin: 0.5em 1.0em 0.25em 0.0em;
+  display: table;
+}
+
 .textwrapleft {
   width: 43%;
   clear: left;
@@ -348,6 +357,11 @@ button.button_new:hover {
 }
 
 figure.textwrapleft img {
+  width: 100%;
+  border: 1px #777 solid;
+}
+
+figure.textwraprightlink img {
   width: 100%;
   border: 1px #777 solid;
 }

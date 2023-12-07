@@ -32,6 +32,7 @@
 <script src="js/change_size.js"></script>
 <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.1.0/dist/progressbar.js"></script>
 <script src="js/progressbar.js"></script>
+<script src="js/zoomin_pic.js"></script>
 <noscript>
 <link rel="stylesheet" href="css/5grid/core.css">
 <link rel="stylesheet" href="css/5grid/core-desktop.css">
@@ -64,7 +65,7 @@
       <a href="#research" class="jumplink pic"> <span class="jumplink arrow icon icon-right"><span class="spans" style="white-space:nowrap">Research</span></span><img src="images/mpia_fall.jpg" alt=""><div class="bottom-right_welcome">Haus der Astronomie, view from mpia</div> </a> </article>
     <article id="research" class="panel">
       <header>
-        <h2>Research <span style="font-size: 0.5em; font-weight: normal; color: #777; font-style: italic;">(this page is still work in progress)</span></h2>
+        <h2>Research</h2>
       </header>
       <section>
       	<p>My work mainly focuses on the physics of the atomic phase of the interstellar medium. We therefore conduct HI emission and absorption studies to explore the processes leading up to the formation of molecular clouds, the sites of star formation.<br>
@@ -106,74 +107,39 @@
       	<figure class="textwrapleft">
   				<img class="myImg" src="images/HI_spectrum.jpg" alt="HI spectrum">
   				<!-- The Modal -->
-				<div id="myModal" class="modal">
+				  <div id="myModal01" class="modal">
   					<span class="close">&times;</span>
   					<img class="modal-content" id="img01">
   					<div class="caption"></div>
-				</div>
-
-				<script>
-				// Get the modal
-				var modal = document.getElementById("myModal");
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementsByClassName("myImg")[0];
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementsByClassName("caption")[0];
-				img.onclick = function(){
-  					modal.style.display = "block";
-  					modalImg.src = this.src;
-  					captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() {
-				  modal.style.display = "none";
-				}
-				</script>
+				  </div>
+          <script>zoomin_pic("01");</script>
   				<figcaption style="font-size: smaller; line-height: 1.5em;">Fig. 2 - HI, HISA, and <sup>13</sup>CO spectrum. Taken from <a target="_blank" rel="noopener noreferrer" href="https://ui.adsabs.harvard.edu/abs/2020arXiv200813502S/abstract">Syed et al. (2020)</a>.</figcaption>
-			</figure>
-      	<p class="firstp">HI self-absorption, also referred to as &quot;HISA&quot;, occurs when a cold gas cloud of atomic hydrogen (HI) is located in front of a warmer HI cloud. We therefore observe the cold cloud in absorption against the brighter background. By measuring HISA, we can disentangle individual clouds from the otherwise ubiquitous HI gas that creates &quot;messy&quot; spectra, mostly due to the Galactic rotation. Figure 1 shows an example spectrum of the HI emission toward the inner Galactic plane at a Galactic longitude of &#8467;&asymp;20&deg;. Using first and second order polynomial fits to the baselines of the absorption features (red dashed), we can isolate HISA spectra (red). We use molecular line tracers, such as <sup>13</sup>CO (blue), to locate HISA in the spectra.</p>
-      	<p class="indentp">We studied two molecular clouds by means of HI self-absorption that had already been identified as Giant molecular filaments (GMFs). For this analysis, we made use of THOR HI data with an angular and spectral resolution of 40&Prime; and 1.5&thinsp;km&thinsp;s<sup>-1</sup>, respectively. By investigating HISA, we can trace part of the cold atomic gas and take a closer look at how this correlates with the molecular gas of the filament. This may help us understand how molecular clouds form out of the atomic gas phase of the interstellar medium.<br>
-Check out the paper <a target="_blank" rel="noopener noreferrer" href="https://ui.adsabs.harvard.edu/abs/2020arXiv200813502S/abstract">here</a>!</p>
+			  </figure>
+      	<p class="firstp">HI self-absorption, also referred to as &quot;HISA&quot;, occurs when a cold gas cloud of atomic hydrogen (HI) is located in front of a warmer HI cloud along our line of sight. We therefore observe the cold cloud in absorption against the warmer emission background. By measuring HISA, we can disentangle individual cold HI clouds from the otherwise ubiquitous HI gas that creates &quot;messy&quot; spectra, mostly due to the Galactic rotation. Figure 1 shows an example spectrum of the HI emission toward the inner Galactic plane at a Galactic longitude of &#8467;&asymp;20&deg;.<br>
+        <figure class="textwraprightlink">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/astrojoni89/astrosaber">
+            <img class="Img_link" src="images/astrosaber_promo_web.jpg" alt="astroSABER logo"></a>
+          <figcaption style="font-size: smaller; line-height: 1.5em;">Fig. 3 - astroSABER logo. Rendered with blender3.1.0.</figcaption>
+        </figure>
+        Using first and second order polynomial fits to the baselines of the absorption features (red dashed), we can isolate
+        HISA spectra (red). We use molecular line tracers, such as <sup>13</sup>CO (blue), to identify molecular clouds. By
+        correlating molecular line emission with HISA, we can identify cold atomic gas within those star-forming regions.<br>
+        We conducted an analysis built upon previous case studies that identified HI self-absorption using polynomial baseline fitting. For an unbiased baseline extraction, we developed the automated extraction routine astroSABER (as in Self-Absorption Baseline ExtractoR) that uses a supervised machine learning technique to find optimal baselines for self-absorption. In doing so, we can systematically obtain HISA independent of molecular line emission. This may help us understand how molecular clouds form out of the atomic gas phase of the interstellar medium.<br>
+        Check out the case study <a target="_blank" rel="noopener noreferrer" href="https://ui.adsabs.harvard.edu/abs/2020arXiv200813502S/abstract">here</a> and the paper introducing the new method <a target="_blank" rel="noopener noreferrer"
+          href="https://ui.adsabs.harvard.edu/abs/2023A%26A...679A.130S/abstract">here</a>!</p>
       </section>
       <section id="NH3">
       	<h3>Temperature and kinematics of massive star-forming clumps</h3>
       	<figure class="textwrapright">
   				<img class="myImg" src="images/ammonia_spectrum.jpg" alt="NH<sub>3</sub> spectrum">
   				<!-- The Modal -->
-				<div id="myModal2" class="modal">
+				  <div id="myModal02" class="modal">
   					<span class="close">&times;</span>
   					<img class="modal-content" id="img02">
   					<div class="caption"></div>
-				</div>
-
-				<script>
-				// Get the modal
-				var modal = document.getElementById("myModal2");
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementsByClassName("myImg")[1];
-				var modalImg = document.getElementById("img02");
-				var captionText = document.getElementsByClassName("caption")[1];
-				img.onclick = function(){
-  					modal.style.display = "block";
-  					modalImg.src = this.src;
-  					captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[1];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() {
-				  modal.style.display = "none";
-				}
-				</script>
-  				<figcaption style="font-size: smaller; line-height: 1.5em;">Fig. 3 - NH<sub>3</sub> spectrum</figcaption>
+				  </div>
+				  <script>zoomin_pic("02")</script>
+  				<figcaption style="font-size: smaller; line-height: 1.5em;">Fig. 4 - NH<sub>3</sub> spectrum</figcaption>
 			</figure>
       	<p class="firstp">Here I present the research conducted within the scope of my Bachelor thesis. We have investigated the kinematics and temperature of two high-mass gas clumps using ammonia observations. Ammonia (NH<sub>3</sub>) is a suitable molecule to trace very cold (<i>T</i>&thinsp;~&thinsp;20&thinsp;K) and dense (<i>n</i>&thinsp;>10<sup>4</sup>&thinsp;cm<sup>-3</sup>) gas. By observing different metastable lines of the NH<sub>3</sub> hyperfine structure, which are well detectable with radio telescopes (wavelength &lambda;&approx;1.3&thinsp;cm), we can determine the underlying kinematics and temperature of the clumps.</p>
 
