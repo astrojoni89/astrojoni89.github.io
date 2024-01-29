@@ -4,25 +4,26 @@
 <meta charset="UTF-8">
 <!-- Primary Meta Tags -->
 <title>MPIA - Jonas Syed</title>
-<meta name="title" content="MPIA - Jonas Syed">
-<meta name="description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy.">
+<meta name="title" content="Jonas Syed - personal homepage">
+<meta name="description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy and his current projects.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.mpia.de/homes/syed/">
-<meta property="og:title" content="MPIA - Jonas Syed">
-<meta property="og:description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy.">
+<meta property="og:url" content="https://astrojoni89.github.io/">
+<meta property="og:title" content="Jonas Syed - personal homepage">
+<meta property="og:description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy and his current projects.">
 <meta property="og:image" content="https://www.mpia.de/homes/syed/mpia_campus_preview.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.mpia.de/homes/syed/">
-<meta property="twitter:title" content="MPIA - Jonas Syed">
-<meta property="twitter:description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy.">
-<meta property="twitter:image" content="https://www.mpia.de/homes/syed/mpia_campus_preview.jpg">
+<meta property="twitter:url" content="https://astrojoni89.github.io/">
+<meta property="twitter:title" content="Jonas Syed - personal homepage">
+<meta property="twitter:description" content="Welcome to Jonas Syed's personal website! Learn more about his research in the field of astronomy and his current projects.">
+<meta property="twitter:image" content="https://astrojoni89.github.io/mpia_campus_preview.jpg">
 
-<meta name="keywords" content="Jonas Syed, mpia, astronomy, astronomie, star formation">
+<meta name="keywords" content="Jonas Syed, mpia, astronomy, astronomie, star formation, data science">
 <script src="js/jquery-1.9.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="css/5grid/init.js?use=mobile,desktop"></script>
 <script src="js/jquery.formerize-1.1.js"></script>
 <script src="js/init.js"></script>
@@ -33,6 +34,7 @@
 <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.1.0/dist/progressbar.js"></script>
 <script src="js/progressbar.js"></script>
 <script src="js/zoomin_pic.js"></script>
+<script src="js/slidein.js"></script>
 <noscript>
 <link rel="stylesheet" href="css/5grid/core.css">
 <link rel="stylesheet" href="css/5grid/core-desktop.css">
@@ -53,13 +55,13 @@
   <script type="text/javascript" src="js/app.js"></script>
 <div id="overlay_top"><a href="#top"><div class="backtotoparrow"><div class="icon icon-arrowup"></div></div></a></div>
 <div id="wrapper">
-  <nav id="nav"><a href="#welcome" class="icon icon-home active"><span>Home</span></a> <a href="#research" class="icon icon-telescope"><span>Research</span></a> <a href="#publications" class="icon icon-book"><span>Publications</span></a> <a href="#me" class="icon icon-user"><span>About Me</span></a> <a href="#contact" class="icon icon-mail"><span>Get in touch!</span></a> <a target="_blank" rel="noopener noreferrer" href="https://www.mpia.de/de" class="icon icon-mpia"><span>Visit mpia.de</span> </a></nav>
+  <nav id="nav"><a href="#welcome" class="icon icon-home active"><span>Home</span></a> <a href="#research" class="icon icon-telescope" onclick="slider()"><span>Research</span></a> <a href="#publications" class="icon icon-book"><span>Publications</span></a> <a href="#me" class="icon icon-user"><span>About Me</span></a> <a href="#contact" class="icon icon-mail"><span>Get in touch!</span></a> <a target="_blank" rel="noopener noreferrer" href="https://www.mpia.de/de" class="icon icon-mpia"><span>Visit mpia.de</span> </a></nav>
   <div id="main">
     <article id="welcome" class="panel">
       <header>
         <h1>Welcome!</h1>
-        <span class="byline">Jonas Syed<br>Max-Planck-Institut f&uuml;r Astronomie<br>
-          <div class="pato"><img src="images/logo_l.png" alt="Logo MPIA" style="width: 10%; height: 10%;"></div>
+        <span class="byline">Jonas Syed<br>Ph.D. Astronomy<br>Data Scientist<br>
+          <!--<div class="pato"><img src="images/logo_l.png" alt="Logo MPIA" style="width: 10%; height: 10%;"></div>-->
         </span>
         </header>
       <a href="#research" class="jumplink pic"> <span class="jumplink arrow icon icon-right"><span class="spans" style="white-space:nowrap">Research</span></span><img src="images/mpia_fall.jpg" alt=""><div class="bottom-right_welcome">Haus der Astronomie, view from mpia</div> </a> </article>
@@ -68,8 +70,17 @@
         <h2>Research</h2>
       </header>
       <section>
-      	<p>My work mainly focuses on the physics of the atomic phase of the interstellar medium. We therefore conduct HI emission and absorption studies to explore the processes leading up to the formation of molecular clouds, the sites of star formation.<br>
-      	My research interests are <b>atomic/molecular cloud formation</b>, <b>filaments</b>, <b>high-mass star formation</b>, and <b>magnetic fields</b>.</p>
+      	<p>My work as an astronomy researcher mainly focused on the physics of the atomic phase of the interstellar medium. We have primarily conducted HI emission and absorption studies to explore the processes leading up to the formation of molecular clouds, the sites of star formation.<br>
+      	My research interests involve <b>atomic and molecular cloud formation</b>, <b>filaments</b>, <b>high-mass star formation</b>, and <b>magnetic fields</b><br>
+        and generally <b>data science</b>, <b>machine learning systems</b>, and <b>artificial intelligence (AI)</b>, particularly in the realm of <b>AI safety</b>.</p>
+        <div id="itemSlider" style="margin: -1.0em 1.0em 0.25em 0.0em;">
+          <div class="slideIn">Papers that recently caught my attention:</div>
+          <div style="display: grid; gap: 10px; grid-auto-flow: row;">
+            <div class="slideIn"><a target="_blank" rel="noopener noreferrer" href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.4245W/abstract" class="items_list">ATLASGAL - star forming efficiencies and the Galactic star formation rate</a></div>
+            <div class="slideIn"><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1606.06565" class="items_list">Concrete Problems in AI Safety</a></div>
+            <div class="slideIn"><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1706.03762" class="items_list">Attention Is All You Need</a></div>
+          </div>
+        </div>
       </section>
       <section class="5grid is-gallery">
         <h3>Research projects</h3>
@@ -107,7 +118,7 @@
       	<figure class="textwrapleft">
   				<img class="myImg" src="images/HI_spectrum.jpg" alt="HI spectrum">
   				<!-- The Modal -->
-				  <div id="myModal01" class="modal">
+				  <div id="myModal1" class="modal">
   					<span class="close">&times;</span>
   					<img class="modal-content" id="img1">
   					<div class="caption"></div>
@@ -133,7 +144,7 @@
       	<figure class="textwrapright">
   				<img class="myImg" src="images/ammonia_spectrum.jpg" alt="NH<sub>3</sub> spectrum">
   				<!-- The Modal -->
-				  <div id="myModal02" class="modal">
+				  <div id="myModal2" class="modal">
   					<span class="close">&times;</span>
   					<img class="modal-content" id="img2">
   					<div class="caption"></div>
