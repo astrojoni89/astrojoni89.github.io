@@ -316,6 +316,7 @@ button.button_new:hover {
   cursor: pointer;
   border: 1px solid #000000;
   border-radius: 6px;
+  float: left;
 }
 
 .firstp {
