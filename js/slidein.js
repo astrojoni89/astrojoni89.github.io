@@ -6,7 +6,7 @@ function slider() {
     setTimeout(animate, 2500);
   }
   catch(err) {
-    $(elems).show(); //show it anyway; fallback for mobile version
+    $(elems).show();
   }
 
   function animate() {
