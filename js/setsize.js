@@ -4,6 +4,6 @@ $(window).load(function slider() {
   $(elems).each(function () {
     h += $(this).height();
   });
-  console.log(h);
+  //console.log(h);
   $("#itemSlider").height(h);
 });
