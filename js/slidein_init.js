@@ -17,7 +17,7 @@ function slider() {
   var elems_dom = $(elems).get();
 
   try {
-    setTimeout(animate, 2500);
+    setTimeout(animate, 2000);
   }
   catch(err) {
     $(elems).show();
