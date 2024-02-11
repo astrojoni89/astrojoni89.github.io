@@ -33,7 +33,7 @@ function slider() {
           if (elems_dom.length > 0) window.setTimeout(animate);
         },
       },
-      1000
+      750
     );
   };
 };

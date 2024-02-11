@@ -270,6 +270,23 @@ a.buttonADS {
   border-radius: 2px;
 }
 
+a.buttonADS2 {
+  /*float: left;*/
+  background-color: white;
+  border: none;
+  color: #777;
+  padding: 8px 16px;
+  font: 'Source Sans Pro';
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #4967ad;
+  border-radius: 6px;
+}
 
 a.button1:hover {
   background-color: #4967ad;
@@ -277,6 +294,11 @@ a.button1:hover {
 }
 
 a.buttonADS:hover {
+  background-color: #4967ad;
+  color: white;
+}
+
+a.buttonADS2:hover {
   background-color: #4967ad;
   color: white;
 }
