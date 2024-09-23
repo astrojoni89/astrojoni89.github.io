@@ -327,6 +327,7 @@ button.button_new:hover {
 
 .slideIn {
   display: none;
+  line-height: normal;
 }
 
 .items_list {

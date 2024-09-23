@@ -1,5 +1,6 @@
 $(window).load(function slider() {
   if (_5grid.isMobile) {
+    $(".slideIn").css({"margin" : "auto", "text-align": "center"});
     $(".slideIn").show();
   } else {
     var elems = $(".slideIn");
