@@ -217,6 +217,7 @@ div.backtotoparrow {
   /*float: right;*/
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
+  border-radius: 3px;
   color: white;
   padding: 4px 8px 4px 16px;
   font: 'Source Sans Pro';
@@ -224,7 +225,9 @@ div.backtotoparrow {
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  transition-duration: 0.4s;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, background-color 0.4s;
   cursor: pointer;
 }
 

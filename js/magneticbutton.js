@@ -9,13 +9,14 @@ $(window).load(function () {
     });
 
     button.addEventListener("mousemove", (e) => {
-      const mousePosX = e.pageX - boundingRect.left;
-      const mousePosY = e.pageY - boundingRect.top;
+      boundingRect = button.getBoundingClientRect();
+      const mousePosX = e.clientX - boundingRect.left;
+      const mousePosY = e.clientY - boundingRect.top;
 
       // define destination values of button
       gsap.to(button, {
         x: (mousePosX - boundingRect.width / 2) * 0.1,
-        y: (mousePosY - boundingRect.height / 2) * 0.05,
+        y: (mousePosY - boundingRect.height / 2) * 0.1,
         duration: 0.8,
         ease: "power3.out",
       });

@@ -14,7 +14,8 @@ _5grid.ready(function() {
 			resizeSpeed:	600,		// Speed to resize panel
 			fadeSpeed:		300,		// Speed to fade in/out
 			sizeFactor:		11.5,		// Size factor
-			sizeLimit:		15			// Minimum point size
+			sizeLimit:		15,			// Minimum point size
+			sizeMax:		16			// Maximum point size (limits scaling on widescreen)
 		};
 
 	/*********************************************************************************/
@@ -53,7 +54,7 @@ _5grid.ready(function() {
 			// Body
 				_body.h5u_resize = function() {
 					var factor = (_window.width() * _window.height()) / (1440 * 900);
-					_body.css('font-size', Math.max(Math.floor(factor * settings.sizeFactor), settings.sizeLimit) + 'pt');
+					_body.css('font-size', Math.min(Math.max(Math.floor(factor * settings.sizeFactor), settings.sizeLimit), settings.sizeMax) + 'pt');
 					_main.height(panels[activePanelId].outerHeight());
 					_body.h5u_reposition();
 				};
