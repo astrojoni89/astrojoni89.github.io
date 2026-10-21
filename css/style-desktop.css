@@ -412,6 +412,18 @@
                         transition: .30s ease;
 					}
 
+					#me .pic.fun-facts .arrow .spans
+					{
+						display: block;
+						text-indent: 2em;
+                        position: absolute;
+                        top: 0%;
+                        left: 0%;
+                        opacity: 0;
+                        transition: .30s ease;
+						font-size: 0.75em;
+					}
+
                     #me .pic:hover .arrow .spans
 					{
                         opacity: 100;
@@ -422,6 +434,12 @@
 					{
 						width: 7em;
 						padding-right: 4.25em;
+					}
+
+					#me .pic.fun-facts:hover .arrow
+					{
+						width: 9em;
+						padding-right: 7.25em;
 					}
 
 			#me header
